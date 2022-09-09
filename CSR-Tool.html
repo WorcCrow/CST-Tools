@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR-Tools</title>
+    <style>
+        input::placeholder{
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CSR-Tool</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Save</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row g-3 mb-2 align-items-center" template="Input2" hidden>
+            <div class="col-10 col-sm-8">
+                <input type="search" class="form-control font-weight-bold" placeholder="placeholder" style="font-weight:bold" /> 
+            </div>
+            <div class="col-2 col-sm-4">
+                <label class="col-form-label input-label">Label</label>
+            </div>
+        </div>
+
+        <div class="border m-2 p-2" template="Group" hidden>
+            <div class="row m-0 pb-2">
+                <button type="button" class="ms-auto btn-close" data-target="" onclick="clearField(this)"></button>
+            </div>
+        </div>
+        <div class="form-floating col-12 col-sm-8 col-md-6 mb-2" template="Input" hidden>
+            <input type="search" class="form-control form-control-lg" placeholder="CALLER'S NAME"></input>
+            <label class="input-label">CALLER'S NAME</label>
+        </div>
+
+        <div id="formList" class="row m-0">
+        </div>
+    </div>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        var script = document.createElement("script")
+        script.src = "config.js?v=" + Math.random() * 1000
+        document.body.append(script)
+    </script>
+</body>
+
+</html>
